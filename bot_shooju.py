@@ -27,9 +27,9 @@ unzip = ZipFile(BytesIO(response.read()))
 unzip.extractall("downloads")
 unzip.close()
 
-with open("downloads/jodi_gas_beta.csv", 'r') as mycsv:
+with open("downloads/jodi_gas_beta.csv", 'r') as myfile:
 
-    reader = csv.DictReader(mycsv)
+    reader = csv.DictReader(myfile)
 
     primary_key = itemgetter('REF_AREA', 'ENERGY_PRODUCT', 'FLOW_BREAKDOWN', 'UNIT_MEASURE',
                              'TIME_PERIOD')
